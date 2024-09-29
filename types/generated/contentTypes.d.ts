@@ -62,6 +62,7 @@ export interface ApiVoteVote extends Struct.CollectionTypeSchema {
     singularName: 'vote';
     pluralName: 'votes';
     displayName: 'vote';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -69,7 +70,7 @@ export interface ApiVoteVote extends Struct.CollectionTypeSchema {
   attributes: {
     option: Schema.Attribute.Relation<'manyToOne', 'api::option.option'>;
     poll: Schema.Attribute.Relation<'manyToOne', 'api::poll.poll'>;
-    users_permissions_user: Schema.Attribute.Relation<
+    user: Schema.Attribute.Relation<
       'manyToOne',
       'plugin::users-permissions.user'
     >;

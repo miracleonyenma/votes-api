@@ -1,4 +1,32 @@
+// ./src/index.ts
+
 // import type { Core } from '@strapi/strapi';
+
+import { init } from "@instantdb/admin";
+
+type InstantDBSchema = {
+  votes: {
+    user: {
+      documentId: string;
+      username: string;
+      email: string;
+    };
+    poll: {
+      question: string;
+      documentId: string;
+    };
+    option: {
+      value: string;
+      documentId: string;
+    };
+    createdAt: string;
+  };
+};
+
+export const db = init<InstantDBSchema>({
+  appId: process.env.INSTANT_APP_ID,
+  adminToken: process.env.INSTANT_ADMIN_TOKEN,
+});
 
 export default {
   /**

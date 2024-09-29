@@ -75,7 +75,7 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::vote.vote",
-      "mappedBy": "users_permissions_user"
+      "mappedBy": "user"
     }
   }
 }

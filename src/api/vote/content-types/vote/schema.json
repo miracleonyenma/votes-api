@@ -4,7 +4,8 @@
   "info": {
     "singularName": "vote",
     "pluralName": "votes",
-    "displayName": "vote"
+    "displayName": "vote",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,7 +24,7 @@
       "target": "api::poll.poll",
       "inversedBy": "votes"
     },
-    "users_permissions_user": {
+    "user": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
