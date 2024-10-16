@@ -67,12 +67,12 @@ export default (config, { strapi }: { strapi: Core.Strapi }) => {
           },
           // Use the poll and option information from the vote document
           poll: {
-            documentId: document.poll,
+            documentId: document.poll.documentId,
             question: document.poll.question,
           },
           // Use the option information from the vote document
           option: {
-            documentId: document.option,
+            documentId: document.option.documentId,
             value: document.option.value,
           },
           // Use the creation timestamp from the vote document
